@@ -1,4 +1,4 @@
-from etl.etl_pipeline import transform_log_data
+from ETL.etl import transform_log_data
 
 def test_transform_log_data():
     input_data = [

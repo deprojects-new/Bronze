@@ -1,3 +1,5 @@
-flake8
+boto3
+pyspark
 pytest
+flake8
 black

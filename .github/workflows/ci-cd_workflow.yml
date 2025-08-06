@@ -47,6 +47,9 @@ jobs:
         run: |
           black src/ETL/  src/lambda/
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE/src" >> $GITHUB_ENV
+
       - name: Run pytest
         run: |
           pytest tests/  

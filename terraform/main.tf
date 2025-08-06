@@ -12,13 +12,20 @@ provider "aws" {
   region = "us-east-2"  # Change this to your preferred AWS region
 }
 
-module "s3_dummy" {
+module "s3_log_storage" {
   source      = "./modules/s3"
-  bucket_name = "bronze-unique-test"
+  bucket_name = "bronze-logs"
   environment = var.environment
   tags = {
-    Project = "BronzeGuide"
-    Owner   = "AAJaisiv"
+    Project = "Bronze"
+    Owner   = "Team"
     Env     = var.environment
+    Purpose = "Log Storage"
   }
+}
+
+module "iam_users" {
+  source      = "./modules/iam"
+  environment = var.environment
+  region      = "us-east-2"
 }

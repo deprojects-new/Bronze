@@ -58,6 +58,7 @@ jobs:
       
       - name: Run black (code formatting)
         run: |
+          black --version
           black --check src/ETL/ src/lambdafn/
       
       - name: Run flake8 (linting)

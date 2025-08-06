@@ -45,7 +45,7 @@ jobs:
 
       - name: Run flake8
         run: |
-          flake8 etl/ lambda/
+          flake8 src/ETL/  src/lambda/
 
       - name: Run pytest
         run: |

@@ -45,7 +45,7 @@ jobs:
 
       - name: Run black
         run: |
-          flake8 src/ETL/  src/lambda/
+          black src/ETL/  src/lambda/
 
       - name: Run pytest
         run: |
